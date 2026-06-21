@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Untuk Fany ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+overflow:hidden;
+font-family:'Segoe UI',sans-serif;
+background:#000;
+}
+
+/* VIDEO BACKGROUND */
+
+#bgVideo{
+position:fixed;
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+filter:
+brightness(.35)
+blur(4px);
+
+z-index:-2;
+}
+
+.overlay{
+position:fixed;
+inset:0;
+
+background:
+rgba(255,245,235,.20);
+
+z-index:-1;
+}
+
+/* PAGE */
+
+.page{
+
+height:100vh;
+
+display:none;
+
+justify-content:center;
+align-items:center;
+flex-direction:column;
+
+padding:20px;
+
+animation:fade .5s ease;
+
+}
+
+.active{
+display:flex;
+}
+
+@keyframes fade{
+
+from{
+opacity:0;
+transform:translateY(20px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* CARD */
+
+.card{
+
+width:720px;
+max-width:92%;
+
+background:
+rgba(255,255,255,.95);
+
+border-radius:28px;
+
+padding:40px;
+
+position:relative;
+
+backdrop-filter:blur(15px);
+
+box-shadow:
+0 20px 60px rgba(0,0,0,.18);
+
+}
+
+/* LABEL */
+
+.label{
+
+position:absolute;
+
+top:-15px;
+left:25px;
+
+background:#b76e79;
+
+color:white;
+
+padding:8px 18px;
+
+border-radius:20px;
+
+font-size:14px;
+font-weight:600;
+
+}
+
+/* TEXT */
+
+.text{
+
+font-family:'Caveat',cursive;
+
+font-size:34px;
+
+line-height:1.3;
+
+letter-spacing:.3px;
+
+text-align:center;
+
+color:#2e2e2e;
+
+min-height:130px;
+
+}
+
+/* FOTO */
+
+.foto{
+
+width:260px;
+
+display:block;
+
+margin:0 auto 25px auto;
+
+border-radius:20px;
+
+box-shadow:
+0 0 35px rgba(0,0,0,.2);
+
+}
+
+/* BUTTON */
+
+button{
+
+margin-top:25px;
+
+background:#b76e79;
+
+color:white;
+
+padding:14px 40px;
+
+border:none;
+
+border-radius:999px;
+
+font-size:16px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:translateY(-2px);
+
+}
+
+/* LOVE */
+
+.heart{
+
+position:fixed;
+
+top:-50px;
+
+pointer-events:none;
+
+z-index:9999;
+
+}
+
+/* PROGRESS */
+
+.progress{
+
+display:flex;
+
+gap:8px;
+
+margin-top:20px;
+
+}
+
+.dot{
+
+width:12px;
+height:12px;
+
+border-radius:50%;
+
+background:#d7c1c7;
+
+}
+
+.active-dot{
+
+width:35px;
+
+border-radius:20px;
+
+background:#b76e79;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<video autoplay muted loop id="bgVideo">
+
+<source src="kenangan.mp4" type="video/mp4">
+
+</video>
+
+<div class="overlay"></div>
+
+<audio id="musik" loop>
+
+<source src="lagu.mp3" type="audio/mpeg">
+
+</audio>
+
+<!-- HALAMAN 1 -->
+
+<div class="page active">
+
+<div class="card">
+
+<div class="label">
+untuk Fany ❤️
+</div>
+
+<div class="text" id="text0"></div>
+
+</div>
+
+<button onclick="nextPage()">
+Lanjut ❤️
+</button>
+
+<div class="progress">
+
+<div class="dot active-dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+
+</div>
+
+</div>
+
+<!-- HALAMAN 2 -->
+
+<div class="page">
+
+<div class="card">
+
+<div class="label">
+yang ingin aku bilang
+</div>
+
+<div class="text" id="text1"></div>
+
+</div>
+
+<button onclick="nextPage()">
+Lanjut ❤️
+</button>
+
+<div class="progress">
+
+<div class="dot"></div>
+<div class="dot active-dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+
+</div>
+
+</div>
+
+<!-- HALAMAN 3 -->
+
+<div class="page">
+
+<div class="card">
+
+<div class="label">
+yang baru aku sadari
+</div>
+
+<div class="text" id="text2"></div>
+
+</div>
+
+<button onclick="nextPage()">
+Lanjut ❤️
+</button>
+
+<div class="progress">
+
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot active-dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+
+</div>
+
+</div>
+
+<!-- HALAMAN 4 -->
+
+<div class="page">
+
+<div class="card">
+
+<div class="label">
+yang paling aku kangenin
+</div>
+
+<div class="text" id="text3"></div>
+
+</div>
+
+<button onclick="nextPage()">
+Lanjut ❤️
+</button>
+
+<div class="progress">
+
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot active-dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+
+</div>
+
+</div>
+
+<!-- HALAMAN 5 -->
+
+<div class="page">
+
+<div class="card">
+
+<img src="foto.jpg" class="foto">
+
+<div class="label">
+tentang kita
+</div>
+
+<div class="text" id="text4"></div>
+
+</div>
+
+<button onclick="nextPage()">
+Lanjut ❤️
+</button>
+
+<div class="progress">
+
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot active-dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+
+</div>
+
+</div>
+
+<!-- HALAMAN 6 -->
+
+<div class="page">
+
+<div class="card">
+
+<div class="label">
+yang nggak pernah kukirim
+</div>
+
+<div class="text" id="text5"></div>
+
+</div>
+
+<button onclick="nextPage()">
+Lanjut ❤️
+</button>
+
+<div class="progress">
+
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot active-dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+
+</div>
+
+</div>
+
+<!-- HALAMAN 7 -->
+
+<div class="page">
+
+<div class="card">
+
+<div class="label">
+yang sebenarnya kurasa
+</div>
+
+<div class="text" id="text6"></div>
+
+</div>
+
+<button onclick="nextPage()">
+Lanjut ❤️
+</button>
+
+<div class="progress">
+
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot active-dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+
+</div>
+
+</div>
+
+<!-- HALAMAN 8 -->
+
+<div class="page">
+
+<div class="card">
+
+<div class="label">
+yang belum sempat kusampaikan
+</div>
+
+<div class="text" id="text7"></div>
+
+</div>
+
+<button onclick="nextPage()">
+Lanjut ❤️
+</button>
+
+<div class="progress">
+
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot active-dot"></div>
+<div class="dot"></div>
+
+</div>
+
+</div>
+
+<!-- HALAMAN 9 -->
+
+<div class="page">
+
+<div class="card" id="lastCard">
+
+<div class="label">
+satu pertanyaan terakhir
+</div>
+
+<div class="text" id="text8"></div>
+
+<div style="margin-top:25px;">
+
+<button onclick="jawabYa()">
+❤️ Aku Mau Mencoba Lagi
+</button>
+
+<button onclick="jawabBelum()">
+🌷 Aku Masih Butuh Waktu
+</button>
+
+</div>
+
+</div>
+
+<div class="progress">
+
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot active-dot"></div>
+
+</div>
+
+</div>
+
+<script>
+
+const texts = [
+
+`Hai sayang...
+
+Kalau kamu lagi baca ini sekarang,
+makasih ya udah mau luangin waktu buat lihat semua ini.`,
+
+`Sebenernya aku nggak bikin ini karena aku kehilangan kamu sepenuhnya.
+
+Karena sampai hari ini kita masih ngobrol.
+Masih teleponan.
+Masih keluar juga.
+
+Dan jujur...
+aku bersyukur buat itu.`,
+
+`Tapi semakin hari aku sadar satu hal.
+
+Yang aku kangenin bukan chatnya.
+Bukan teleponnya.
+
+Karena semua itu masih ada.
+
+Yang aku kangenin...
+adalah perasaan tenang karena tahu kamu masih jadi pacarku.`,
+
+`Kadang pas kita ngobrol aku suka lupa kalau keadaan kita udah berubah.
+
+Masih ketawa.
+Masih cerita.
+Masih bercanda.
+
+Sampai akhirnya aku ingat...
+
+sekarang semuanya nggak sama seperti dulu lagi.`,
+
+`Kalau dipikir-pikir...
+
+aku nggak kehilangan kamu sepenuhnya.
+
+Tapi aku kehilangan status yang paling aku suka dari kita.
+
+Aku kehilangan kesempatan buat bilang,
+"itu pacarku."
+
+Dan ternyata itu lebih berat dari yang aku kira.`,
+
+`Ada banyak pesan yang sebenarnya pernah aku ketik.
+
+Panjang.
+Banget.
+
+Tapi akhirnya aku hapus lagi.
+
+Bukan karena aku nggak jadi ngomong.
+
+Aku cuma takut bikin kamu nggak nyaman.`,
+
+`Jujur...
+
+aku seneng karena sampai hari ini kita masih bisa ngobrol.
+
+Walaupun sekarang cuma sebagai teman.
+
+Karena setidaknya aku masih bisa tahu kabar kamu.
+
+Dan itu lebih berarti dari yang mungkin kamu kira.`,
+
+`Aku nggak bikin ini buat maksa kamu balik.
+
+Aku cuma pengen jujur.
+
+Karena sampai hari ini...
+
+di antara banyak hal yang berubah,
+
+perasaanku ke kamu masih belum berubah.`,
+
+`Kalau aku minta kesempatan untuk jadi pacarmu lagi...
+
+apa kamu mau mempertimbangkannya? ❤️`
+
+];
+
+function typeText(id,text){
+
+const el = document.getElementById(id);
+
+if(!el) return;
+
+el.innerHTML = "";
+
+let i = 0;
+
+function typing(){
+
+if(i < text.length){
+
+if(text[i] === "\n"){
+
+el.innerHTML += "<br>";
+
+}else{
+
+el.innerHTML += text[i];
+
+}
+
+i++;
+
+setTimeout(
+typing,
+Math.random()*30+20
+);
+
+}
+
+}
+
+typing();
+
+}
+
+let currentPage = 0;
+
+const pages = document.querySelectorAll(".page");
+
+function nextPage(){
+
+if(currentPage === 0){
+
+const musik =
+document.getElementById("musik");
+
+if(musik){
+
+musik.play().catch(()=>{});
+
+}
+
+}
+
+pages[currentPage]
+.classList.remove("active");
+
+currentPage++;
+
+if(currentPage < pages.length){
+
+pages[currentPage]
+.classList.add("active");
+
+typeText(
+"text"+currentPage,
+texts[currentPage]
+);
+
+}
+
+}
+
+typeText(
+"text0",
+texts[0]
+);
+
+function jawabYa(){
+
+const card =
+document.getElementById("lastCard");
+
+card.innerHTML = `
+
+<div class="label">
+❤️ makasih sayang
+</div>
+
+<div class="text">
+
+Jujur...
+
+aku seneng banget baca itu.
+
+Aku nggak janji bakal jadi sempurna.
+
+Tapi aku janji bakal belajar dari semua yang pernah terjadi.
+
+Dan kalau kesempatan itu datang lagi...
+
+aku bakal menjaganya lebih baik dari sebelumnya.
+
+❤️
+
+- Abi
+
+</div>
+
+`;
+
+}
+
+function jawabBelum(){
+
+const card =
+document.getElementById("lastCard");
+
+card.innerHTML = `
+
+<div class="label">
+🌷 terima kasih
+</div>
+
+<div class="text">
+
+Nggak apa-apa.
+
+Aku nggak bikin ini buat memaksa kamu memilih sekarang.
+
+Aku cuma pengen jujur tentang apa yang aku rasain.
+
+Dan apapun jawabannya...
+
+aku tetap seneng karena kamu udah baca semuanya sampai akhir.
+
+❤️
+
+- Abi
+
+</div>
+
+`;
+
+}
+
+/* LOVE JATUH */
+
+function createHeart(){
+
+const heart =
+document.createElement("div");
+
+heart.classList.add("heart");
+
+const hearts = [
+"❤️",
+"💕",
+"💖",
+"🤍"
+];
+
+heart.innerHTML =
+hearts[
+Math.floor(
+Math.random()*hearts.length
+)
+];
+
+heart.style.left =
+Math.random() *
+window.innerWidth + "px";
+
+heart.style.fontSize =
+(Math.random()*20+15)
++ "px";
+
+document.body.appendChild(
+heart
+);
+
+let pos = -50;
+
+const fall = setInterval(()=>{
+
+pos += 3;
+
+heart.style.top =
+pos + "px";
+
+if(
+pos >
+window.innerHeight
+){
+
+clearInterval(fall);
+
+heart.remove();
+
+}
+
+},20);
+
+}
+
+setInterval(
+createHeart,
+1200
+);
+
+</script>
+
+</body>
+</html>
